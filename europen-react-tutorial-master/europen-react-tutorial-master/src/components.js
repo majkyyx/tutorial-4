@@ -21,3 +21,15 @@ export class TodoList extends Component{
     )
   }
 }
+
+export class AddTodo extends Component {
+  onKeyDown(e) {
+    if (e.keyCode === 13) this.props.onTodoEntered(e.currentTarget.value);
+  }
+  
+  render() {  
+    return (
+      <input type="text" placeholder="Enter todo" onKeyDown={::this.onKeyDown} />
+    )
+  }
+}
