@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import {createStore} from 'redux';
 import {todoApp} from './src/reducers';
 import {addTodo} from './src/actions';
+import {App} from './src/app';
 
 let store = createStore(todoApp);
 
@@ -21,6 +22,6 @@ unsubscribe();
 
 let rootElement = document.getElementById('root');
 ReactDOM.render(
-  <div>Hello world!</div>,
+  <App />,
   rootElement
 );

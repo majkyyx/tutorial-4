@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class TodoItem extends Component {
   render () {
-    cons {item} = this.props;
+    cons item = this.props;
     return (
       <li>{item.text}</li>
     )
