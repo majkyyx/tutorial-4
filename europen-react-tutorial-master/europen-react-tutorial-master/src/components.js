@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class TodoItem extends Component {
   render () {
-    cons item = this.props;
+    const {item} = this.props;
     return (
       <li>{item.text}</li>
     )
@@ -11,11 +11,11 @@ class TodoItem extends Component {
 
 export class TodoList extends Component{
   render() {
-    consts todos = this.props.todos;
+    const todos = this.props.todos;
     return (
       <ul>
       {todos.map((todo, index) => {
-        return <TodoItem key={index} index={todo} /> 
+        return <TodoItem key={index} item={todo} /> 
       })}
       </ul>
     )
