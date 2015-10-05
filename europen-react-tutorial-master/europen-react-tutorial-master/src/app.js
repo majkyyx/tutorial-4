@@ -13,6 +13,7 @@ export class App extends Component {
   render() {
     return (
       <div>
+      <AddTodo onTodoEntered={::this.onTodoEntered} />
         <AddTodo onTodoEntered={::this.onTodoEntered} />
         <TodoList todos={this.props.todos} />
       </div>
